@@ -1,32 +1,77 @@
-# browser-extensions-manager-ui
+# Frontend Mentor - Gerenciador de Extensões do Navegador - Interface
 
-Este projeto é uma implementação da interface do usuário (UI) para um gerenciador de extensões de navegador, desenvolvido como um desafio do [Frontend Mentor](https://www.frontendmentor.io/). O objetivo principal é praticar e aplicar meus conhecimentos em HTML, CSS e JavaScript, utilizando desafios realistas para aprimorar minhas habilidades no desenvolvimento frontend.
+Este é o resultado do meu trabalho para o desafio da interface do gerenciador de extensões de navegador no [Frontend Mentor](https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp). Os desafios do Frontend Mentor me ajudam a aprender a programar construindo projetos mais realistas.
 
-## Funcionalidades Implementadas
+## Conteúdo
 
-Até o momento, as seguintes funcionalidades foram implementadas:
+- [Visão Geral](#visão-geral)
+  - [O desafio](#o-desafio)
+  - [Como ficou](#como-ficou)
+  - [Links](#links)
+- [Meu Processo](#meu-processo)
+  - [Construido com](#construido-com)
+  - [O que aprendi](#o-que-aprendi)
+  - [Desenvolvimento Contínuo](#desenvolvimento-contínuo)
+  - [Recursos Úteis](#recursos-úteis)
+- [Autor](#autor)
 
-* **Estrutura HTML:** Criação da estrutura HTML semântica para o gerenciador de extensões.
-* **Estilização CSS:** Aplicação de estilos CSS para o layout, cores, tipografia e responsividade, seguindo o guia de estilo fornecido.
-* **Listagem Dinâmica de Extensões:** Carregamento e exibição dinâmica dos dados das extensões a partir de um arquivo `data.json`.
-* **Alternar Estado Ativo/Inativo:** Funcionalidade para ativar e desativar extensões individualmente através de um switch.
-* **Remover Extensões:** Funcionalidade para remover extensões da lista.
+## Visão Geral
 
-## Tecnologias Utilizadas
+### O desafio
 
-* HTML
-* CSS
-* JavaScript
+Eu tinha que construir a tela de um gerenciador de extensões de navegador que ficasse o mais parecido possível com o modelo.
 
-## Como Rodar o Projeto Localmente
+Os usuários devem ser capazes de:
 
-1.  Clone este repositório.
-2.  Abra o arquivo `index.html` em seu navegador.
+- [x] Alternar as extensões entre os estados ativo e inativo
+- [ ] Filtrar extensões ativas e inativas
+- [x] Remover extensões da lista
+- [ ] Selecionar o tema de cores
+- [x] Ver a layout ideal para a interface dependendo do taanho da tela do dispositivo
+- [x] Ver os estados de passar o mouse (hover) e foco para todos os elementos interativos da página
 
-## Próximos Passos
+### Meu Processo
 
-* Implementar a funcionalidade de filtragem das extensões (exibir todas, ativas ou inativas).
-* Implementar a funcionalidade de troca de temas de cor (claro/escuro).
+Vou colocar a imagem do meu projeto quando o desafio estiver completo.
+
+### Links
+
+## Meu processo
+
+### Construido com
+
+- HTML5 
+- CSS 
+  - Variáveis CSS
+  - Flexbox 
+  - Grid 
+- JavaScript 
+  - DOM 
+  - Fetch API 
+
+### O que aprendi
+
+Nesse projeto, aprendi muita coisa legal:
+
+- Usei o **Flexbox e o Grid** para organizar os elementos na tela.
+- Também usei as **Variáveis CSS** para deixar o código mais organizado e fácil de fazer alterações.
+- Deixei as pastas do projeto organizadas para facilitar a estilização.
+- Usei o **DOM** para manipular os elementos como criar e tirar elementos da página de forma dinamica.
+- Colocar em prática muitas coisas que eu aprendi sobre **DOM**, **CSS** e **HTML** me deixou bem animado, ja estou pronto para novos desafios.
+
+### Desenvolvimento Contínuo
+
+Meu objetivo é continuar a resolver desafios cada vez mais complexos para aprimorar minhas habilidades em desenvolvimento frontend. Quero aprofundar meus conhecimentos em:
+
+- Manipulação avançada do DOM.
+- CSS avançado e técnicas de layout.
+- Conceitos de JavaScript mais complexos.
+
+### Recurso Úteis
+
+- [Curso em Vídeo (HTML)](https://www.cursoemvideo.com/) - Os cursos do Professor Guanabara foram fundamentais para construir uma base sólida em HTML, que pude aplicar neste projeto.
+- [Curso em Vídeo (JavaScript)](https://www.cursoemvideo.com/) - Da mesma forma, o curso de JavaScript me forneceu os conceitos necessários para implementar a interatividade e a manipulação dinâmica dos elementos.
+- [Gemini](https://gemini.google.com/) - O Gemini me ajudou a entender e dividir o projeto em varias partes menores, me ajudando no processo de implementação e resolução de todo o processo lógico do projeto.
 
 ## Autor
 
