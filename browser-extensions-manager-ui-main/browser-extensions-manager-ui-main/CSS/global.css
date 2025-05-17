@@ -1,0 +1,48 @@
+:root {
+    /* Cores Neutras */
+  --neutral-900: hsl(227, 75%, 14%);
+  --neutral-800: hsl(226, 25%, 17%);
+  --neutral-700: hsl(225, 23%, 24%);
+  --neutral-600: hsl(226, 11%, 37%);
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: #d6e2f5;
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
+
+  /* Cores Vermelhas */
+  --red-400: hsl(3, 86%, 64%);
+  --red-500: hsl(3, 71%, 56%);
+  --red-700: hsl(3, 77%, 44%);
+
+  /* Gradientes */
+  --light-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%); 
+  --dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%); 
+
+   /* Tipografia */
+  --font-family-base: 'Noto Sans', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-size-base: 16px;
+}
+
+
+body {
+    font-family: var(--font-family-base), sans-serif;
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-base);
+    background-image: var(--dark-gradient);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1, h2, h3, p, button {
+    margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}

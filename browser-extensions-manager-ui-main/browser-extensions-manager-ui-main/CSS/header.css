@@ -1,0 +1,38 @@
+header {
+    background-color: var(--neutral-700);
+    padding: 15px 20px;
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 250px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.settings-button {
+    background: var(--neutral-600);
+    border: solid 1px var(--neutral-700);
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.settings-button:hover,
+.settings-button::after {
+    border: solid 1px var(--red-400);
+}
+
+.settings-button img {
+    width: 30px;
+    height: auto;
+}

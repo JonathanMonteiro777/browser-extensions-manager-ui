@@ -1,0 +1,12 @@
+/* Estilos para mobile */
+@media (min-width: 768px) {
+  .extensions-list {
+    grid-template-columns: repeat(2, 1fr); /* 3 colunas para telas maiores */
+  }
+}
+
+@media (min-width: 1200px) {
+  .extensions-list {
+    grid-template-columns: repeat(3, 1fr); /* 4 colunas para telas desktop maiores */
+  }
+}

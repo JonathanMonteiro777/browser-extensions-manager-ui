@@ -1,0 +1,47 @@
+.extensions-list {
+    width: 100%;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 10px;
+}
+
+.extension-item {
+    background-color: var(--neutral-700);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.extension-item-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.extension-logo {
+  width: 60px; 
+  height: auto;
+  margin-right: 15px;
+}
+
+.extension-info {
+  flex-grow: 1;
+}
+
+.extension-name {
+  font-size: 1.25em; 
+  color: var(--neutral-200);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 5px;
+}
+
+.extension-description {
+  color: var(--neutral-300); 
+  line-height: 1rem;
+}
+
+
+
+
+
