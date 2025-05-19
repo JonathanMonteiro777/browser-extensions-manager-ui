@@ -24,7 +24,7 @@ O objetivo é construir a tela de um gerenciador de extensões de navegador que 
 Os usuários devem ser capazes de:
 
 - [x] Alternar as extensões entre os estados ativo e inativo
-- [ ] Filtrar extensões ativas e inativas
+- [x] Filtrar extensões ativas e inativas
 - [x] Remover extensões da lista
 - [ ] Selecionar o tema de cores
 - [x] Ver a layout ideal para a interface dependendo do taanho da tela do dispositivo
@@ -40,7 +40,7 @@ Vou colocar a imagem do meu projeto quando o desafio estiver completo.
 
 ### Construido com
 
-- HTML5 
+- HTML5
 - CSS 
   - Variáveis CSS
   - Flexbox 
