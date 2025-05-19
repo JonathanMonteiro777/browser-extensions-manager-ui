@@ -7,7 +7,6 @@
 }
 
 .extension-item {
-    background-color: var(--neutral-700);
     border-radius: 15px;
     padding: 20px;
     display: flex;
@@ -31,7 +30,6 @@
 
 .extension-name {
   font-size: 1.25em; 
-  color: var(--neutral-200);
   font-weight: var(--font-weight-medium);
   margin-bottom: 5px;
 }
@@ -41,7 +39,39 @@
   line-height: 1rem;
 }
 
+/* Estilos tema light*/
+body.light .extensions-list h2 {
+  color: var(--neutral-900);
+}
 
+body.light .extension-item {
+  background-color: var(--neutral-0);
+}
+
+body.light .extension-item-content h3.extension-name {
+  color: var(--neutral-900);
+}
+
+body.light .extension-item-content p.extension-description {
+  color: var(--neutral-600);
+}
+
+/* Estilos tema dark*/
+body.dark .extensions-list h2 {
+  color: var(--neutral-200);
+}
+
+body.dark .extension-item {
+  background-color: var(--neutral-700);
+}
+
+body.dark .extension-item-content h3.extension-name {
+  color: var(--neutral-300);
+}
+
+body.dark .extension-item-content p.extension-description {
+  color: var(--neutral-700);
+}
 
 
 

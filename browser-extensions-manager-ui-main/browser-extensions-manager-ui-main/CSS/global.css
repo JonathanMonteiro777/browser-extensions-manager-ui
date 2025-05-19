@@ -26,17 +26,23 @@
   --font-size-base: 16px;
 }
 
-
 body {
-    font-family: var(--font-family-base), sans-serif;
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-base);
-    background-image: var(--dark-gradient);
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+   font-family: var(--font-family-base), sans-serif;
+   font-weight: var(--font-weight-regular);
+   font-size: var(--font-size-base);
+   margin: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   min-height: 100vh;
+}
+
+body.light {
+  background-image: var(--light-gradient);
+}
+
+body.dark {
+  background-image: var(--dark-gradient);
 }
 
 h1, h2, h3, p, button {
@@ -46,3 +52,8 @@ h1, h2, h3, p, button {
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+
+
+
+

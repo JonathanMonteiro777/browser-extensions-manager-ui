@@ -19,7 +19,7 @@ Este é o resultado do meu trabalho para o desafio da interface do gerenciador d
 
 ### O desafio
 
-Eu tinha que construir a tela de um gerenciador de extensões de navegador que ficasse o mais parecido possível com o modelo.
+O objetivo é construir a tela de um gerenciador de extensões de navegador que fique o mais parecido possível com o modelo.
 
 Os usuários devem ser capazes de:
 

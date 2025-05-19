@@ -1,7 +1,10 @@
+let extensions =[];
+
 fetch('./data.json')
   .then(response => response.json())
   .then(data => {
     console.log(data);
+    extensions = data;
     renderExtensions(data);
   })
   .catch(error => {
@@ -110,4 +113,83 @@ function renderExtensions(extensions) {
 
     extensionListContainer.appendChild(extensionItem);
   });
+}
+
+const filterButtons = document.querySelectorAll('.filter-button');
+let currentFilter = 'All';
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', handleFilterClick);
+});
+
+function handleFilterClick(event) {
+  const clickedFilter = event.target.textContent;
+  console.log('Botão de filtro clicado:', clickedFilter);
+
+  let filteredExtensions = [];
+
+  if (clickedFilter === 'All') {
+    filteredExtensions = extensions;
+  } else if (clickedFilter === 'Active') {
+    filteredExtensions = extensions.filter(extension => extension.isActive);
+  } else if (clickedFilter === 'Inactive') {
+    filteredExtensions = extensions.filter(extension => !extension.isActive);
+  }
+
+  // Limpar a lista de extensões atual na tela
+  const extensionsListContainer = document.querySelector('.extensions-list');
+  extensionsListContainer.innerHTML = '';
+
+  // Renderizar a nova lista filtrada
+  renderExtensions(filteredExtensions);
+
+  // Atulizar o estado visual dos botões de filtro
+  updateFilterButtonStyles(clickedFilter);
+}
+
+function updateFilterButtonStyles(activeFilter) {
+  filterButtons.forEach(button => {
+    if (button.textContent === activeFilter) {
+      button.classList.add('active');
+    } else {
+      button.classList.remove('active');
+    }
+  });
+  currentFilter = activeFilter;
+}
+
+//selecao de tema de cores
+
+const lightThemeButton = document.querySelector('.light-theme');
+const darkThemeButton = document.querySelector('.dark-theme');
+const body = document.body; // Ou outro elemento principal que você queira mudar o tema
+
+lightThemeButton.addEventListener('click', switchToLightTheme);
+darkThemeButton.addEventListener('click', switchToDarkTheme);
+
+function switchToLightTheme() {
+  body.classList.remove('dark');
+  body.classList.add('light');
+  darkThemeButton.style.display = 'block'; // Mostra o botão da lua
+  lightThemeButton.style.display = 'none'; // Esconde o botão do sol
+  localStorage.setItem('theme', 'light'); // Salva a preferência no localStorage
+}
+
+function switchToDarkTheme() {
+  body.classList.remove('light');
+  body.classList.add('dark');
+  lightThemeButton.style.display = 'block'; // Mostra o botão do sol
+  darkThemeButton.style.display = 'none'; // Esconde o botão da lua
+  localStorage.setItem('theme', 'dark'); // Salva a preferência no localStorage
+}
+
+// Verificar a preferência de tema ao carregar a página
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  switchToDarkTheme();
+} else if (savedTheme === 'light') {
+  switchToLightTheme();
+} else {
+  // Se não houver preferência salva, definir o tema claro como padrão
+  switchToLightTheme();
 }

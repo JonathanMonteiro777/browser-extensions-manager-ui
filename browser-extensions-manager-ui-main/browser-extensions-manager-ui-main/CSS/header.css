@@ -1,5 +1,4 @@
-header {
-    background-color: var(--neutral-700);
+.header-section {
     padding: 15px 20px;
     width: 100%;
     max-width: 1440px;
@@ -7,8 +6,9 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    border-radius: 15px;
+    border-radius: 20px;
 }
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -20,19 +20,27 @@ header {
     margin-right: 10px;
 }
 
-.settings-button {
-    background: var(--neutral-600);
-    border: solid 1px var(--neutral-700);
-    border-radius: 10px;
-    padding: 10px;
-    cursor: pointer;
-}
-.settings-button:hover,
-.settings-button::after {
-    border: solid 1px var(--red-400);
+.theme-toggle {
+    display: flex;
+    align-items: center;
 }
 
-.settings-button img {
-    width: 30px;
-    height: auto;
+.theme-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 15px;
+}
+
+.light .header-section {
+    background-color: var(--neutral-0);
+}
+
+body.dark .header-section {
+    background-color: var(--neutral-700);
+}
+
+body.dark-theme {
+    display: none;
 }
