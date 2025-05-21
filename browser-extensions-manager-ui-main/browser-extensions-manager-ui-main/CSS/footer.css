@@ -1,11 +1,14 @@
 .attribution {
-  font-size: 1em;
-  text-align: center;
-  margin-top: 30px;
   color: var(--neutral-600);
+  font-size: 1.5em;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: #3e52a3;
   text-decoration: none;
 }

@@ -30,19 +30,27 @@ body {
    font-family: var(--font-family-base), sans-serif;
    font-weight: var(--font-weight-regular);
    font-size: var(--font-size-base);
-   margin: 20px;
+   margin: 0;
    display: flex;
    flex-direction: column;
-   align-items: center;
    min-height: 100vh;
 }
 
+/* Estilo tema light */
 body.light {
   background-image: var(--light-gradient);
 }
 
+/* Estlio tema dark */
 body.dark {
   background-image: var(--dark-gradient);
+}
+
+.main-content {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto 20px auto;
 }
 
 h1, h2, h3, p, button {

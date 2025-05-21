@@ -26,7 +26,7 @@ Os usuários devem ser capazes de:
 - [x] Alternar as extensões entre os estados ativo e inativo
 - [x] Filtrar extensões ativas e inativas
 - [x] Remover extensões da lista
-- [ ] Selecionar o tema de cores
+- [x] Selecionar o tema de cores
 - [x] Ver a layout ideal para a interface dependendo do taanho da tela do dispositivo
 - [x] Ver os estados de passar o mouse (hover) e foco para todos os elementos interativos da página
 

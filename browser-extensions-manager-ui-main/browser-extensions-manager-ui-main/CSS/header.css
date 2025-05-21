@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 20px auto 20px auto;
     border-radius: 20px;
 }
 
@@ -26,21 +26,40 @@
 }
 
 .theme-button {
-    background: none;
-    border: none;
+    border-color: transparent;
+    border-radius: 15px;
     cursor: pointer;
-    padding: 0;
-    margin-left: 15px;
+    padding: 15px;
+    transition: all 0.2s ease;
 }
 
-.light .header-section {
+/* Estilo tema light*/
+body.light .header-section {
     background-color: var(--neutral-0);
 }
 
-body.dark .header-section {
-    background-color: var(--neutral-700);
+body.light .theme-button {
+    background-color: var(--neutral-100);
 }
 
-body.dark-theme {
+body.light .theme-button:hover {
+    background-color: var(--neutral-300);
+    border-color: var(--red-400);
+    transform: scale(1.1);
+}
+
+/* Estilo tema dark*/
+body.dark .header-section {
+    background-color: var(--neutral-800);
+}
+
+body.dark .theme-button {
+    background-color: var(--neutral-700);
     display: none;
+}
+
+body.dark .theme-button:hover {
+    background-color: var(--neutral-600);
+    border-color: var(--red-400);
+    transform: scale(1.1);
 }

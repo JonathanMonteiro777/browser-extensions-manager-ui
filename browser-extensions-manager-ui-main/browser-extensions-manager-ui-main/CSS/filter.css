@@ -19,14 +19,14 @@
 }
 .filter-button {
     border: 1px solid transparent;
-    font-family: inherit;
+    font-family:var(--font-family-base);
     font-weight: var(--font-weight-medium);
     font-size: 1.25em;
     padding: 8px 15px;
     margin-left: 10px;
     cursor: pointer;
     border-radius: 20px;
-    transition: color 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .filter-button:first-child {
@@ -38,14 +38,7 @@
     border-color: transparent;
 }
 
-.filter-button:hover, 
-.filter-button:focus {
-    color: var(--neutral-300);
-    border-color: var(--red-400);
-    outline: none;
-}
-
-/* Estilo light */
+/* Estilo tema light */
 body.light .filter-section {
   background-color: none;
 }
@@ -55,16 +48,22 @@ body.light .filter-section h2 {
 }
 
 body.light .filter-button {
-    background-color: var(--neutral-0);
-    color: var(--neutral-700);
+  background-color: var(--neutral-0);
+  color: var(--neutral-700);
+}
+
+body.light .filter-button:hover {
+  background-color: var(--neutral-100);
+  border-color: var(--red-500);
+  transform: scale(1.1);
 }
 
 body.light .filter-button.active {
-  background-color: var(--red-400);
+  background-color: var(--red-500);
   color: var(--neutral-0);
 }
 
-/* Estilo dark */
+/* Estilo tema dark */
 body.dark .filter-section {
   background-color: none;
 }
@@ -74,8 +73,14 @@ body.dark .filter-section h2 {
 }
 
 body.dark .filter-button {
-    background-color: var(--neutral-700);
-    color: var(--neutral-300);
+  background-color: var(--neutral-700);
+  color: var(--neutral-300);
+}
+
+body.dark .filter-button:hover {
+  background-color: var(--neutral-600);
+  border-color: var(--red-400);
+  transform: scale(1.1);
 }
 
 body.dark .filter-button.active {
