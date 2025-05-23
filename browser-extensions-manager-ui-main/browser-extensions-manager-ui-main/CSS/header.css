@@ -5,8 +5,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px auto 20px auto;
-    border-radius: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
 }
 
 .logo-container {
@@ -27,7 +27,7 @@
 
 .theme-button {
     border-color: transparent;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
     padding: 15px;
     transition: all 0.2s ease;

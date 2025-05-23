@@ -1,12 +1,83 @@
-/* Estilos para mobile */
-@media (min-width: 768px) {
-  .extensions-list {
-    grid-template-columns: repeat(2, 1fr); /* 3 colunas para telas maiores */
+@media (max-width: 767px) {
+  body {
+    padding: 15px;
   }
-}
 
-@media (min-width: 1200px) {
+  /* header */
+  .header-section {
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  .logo-container img {
+    width: 140px;
+  }
+
+  .theme-button {
+    padding: 8px;
+  }
+
+  .theme-button img {
+    width: 15px;
+  }
+
+  /* Filtros */
+  .filter-section {
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .filter-section h2 {
+    font-size: 1.5em;
+    padding-bottom: 10px;
+  }
+
+  .filter-buttons {
+    font-size: 0.7em;
+    padding: 5px;
+  }
+
+  /* lista de extensions */
   .extensions-list {
-    grid-template-columns: repeat(3, 1fr); /* 4 colunas para telas desktop maiores */
+    grid-template-columns: 1fr;
+    gap: 10px;
+    /* espaçamento entre os cards empilhados */
+  }
+
+  .extension-item {
+    padding: 15px;
+  }
+
+  .extension-logo {
+    width: 45px;
+  }
+
+  .extension-name {
+    font-size: 1em;
+  }
+
+  .extension-description {
+    line-height: 1em;
+    font-size: 0.8em;
+  }
+
+  .remove-button {
+    font-size: 0.8em;
+    padding: 8px 10px;
+  }
+
+  .toggle-switch {
+    width: 40px;
+    height: 20px;
+  }
+
+  .toggle-label::after {
+    width: 16px;
+    height: 16px;
+  }
+
+  .toggle-input:checked+.toggle-label::after {
+    transform: translateX(20px);
   }
 }
