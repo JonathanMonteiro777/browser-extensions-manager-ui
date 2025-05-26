@@ -13,6 +13,7 @@
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.2s ease;
+  outline: none;
 }
 
 .toggle-switch {
@@ -47,7 +48,7 @@
   border-radius: 50%;
   top: 2px;
   left: 2px;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease;  
 }
 
 .toggle-input:checked + .toggle-label {
@@ -59,7 +60,7 @@
 }
 
 .toggle-input:focus + .toggle-label {
-  outline: 2px solid var(--neutral-900); 
+  outline: 2px solid var(--red-500); 
 }
 
 /* Estilo tema light */
@@ -69,7 +70,8 @@ body.light .remove-button {
   color: var(--neutral-700);
 }
 
-body.light .remove-button:hover {
+body.light .remove-button:hover,
+body.light .remove-button:focus {
   background-color: var(--red-500);
   color: var(--neutral-0);
   border: 1px solid var(--red-500);
@@ -87,9 +89,10 @@ body.dark .remove-button {
   color: var(--neutral-300);
 }
 
-body.dark .remove-button:hover {
+body.dark .remove-button:hover,
+body.dark .remove-button:focus {
   background-color: var(--red-500);
-  border: 1px solid var(--red-400);
+  border: 1px solid var(--red-500);
   color: var(--neutral-800);
   transform: scale(1.1);
 }

@@ -31,6 +31,7 @@
     cursor: pointer;
     padding: 15px;
     transition: all 0.2s ease;
+    outline: none;
 }
 
 /* Estilo tema light*/
@@ -42,7 +43,8 @@ body.light .theme-button {
     background-color: var(--neutral-100);
 }
 
-body.light .theme-button:hover {
+body.light .theme-button:hover,
+body.light .theme-button:focus {
     background-color: var(--neutral-300);
     border-color: var(--red-400);
     transform: scale(1.1);
@@ -58,7 +60,8 @@ body.dark .theme-button {
     display: none;
 }
 
-body.dark .theme-button:hover {
+body.dark .theme-button:hover,
+body.dark .theme-button:focus {
     background-color: var(--neutral-600);
     border-color: var(--red-400);
     transform: scale(1.1);

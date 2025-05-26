@@ -5,10 +5,10 @@
   padding: 20px;
   width: 100%;
   max-width: 1440px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: var(--link-color);
   text-decoration: none;
 }

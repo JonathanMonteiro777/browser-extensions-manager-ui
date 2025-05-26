@@ -1,9 +1,9 @@
-let extensions =[];
+// Carregamento do arquivo data.json
+let extensions = [];
 
 fetch('./data.json')
   .then(response => response.json())
   .then(data => {
-    console.log(data);
     extensions = data;
     renderExtensions(data);
   })
@@ -11,9 +11,11 @@ fetch('./data.json')
     console.error('Erro ao carregar o data.json:', error);
   });
 
+// Renderizar as extensões na página
 function renderExtensions(extensions) {
   const extensionListContainer = document.querySelector('.extensions-list');
   extensions.forEach(extension => {
+
     // criando o HTML para cada extensão
     const extensionItem = document.createElement('div');
     extensionItem.classList.add('extension-item');
@@ -51,10 +53,8 @@ function renderExtensions(extensions) {
     removeButton.textContent = 'Remove';
 
     // Adicionando o event listener para o evento 'click' no botão de remover
-    removeButton.addEventListener('click', function() {
+    removeButton.addEventListener('click', function () {
       const extensionName = extension.name;
-
-      console.log(`Botão "Remove" clicado para a extensão: ${extensionName}`);
 
       // 1. Encontrar o índice da extensão no array de dados
       const extensionIndexToRemove = extensions.findIndex(ext => ext.name === extensionName);
@@ -62,21 +62,20 @@ function renderExtensions(extensions) {
       if (extensionIndexToRemove !== -1) {
         // 2. Remover a extensão do array de dados
         extensions.splice(extensionIndexToRemove, 1);
-        console.log('Extensao removida dos dados:', extensions);
 
         // 3. Remover o elemento HTML da extensão da página
         const extensionItemToRemove = this.closest('.extension-item'); // 'this' e o botao, closet('.extension-item') encontra o item pai
         if (extensionItemToRemove) {
           extensionListContainer.removeChild(extensionItemToRemove);
         }
-
-        // (Opcional) Se um filtro estiver aplicado, você pode querer renderizar a lista novamente
-        // para refletir a remoção. Vamos deixar isso para quando implementarmos a filtragem.
       }
     });
+
+    // Criando o toggle switch para ativar/desativar a extensão
     const toggleSwitch = document.createElement('div');
     toggleSwitch.classList.add('toggle-switch');
 
+    // Criando o input do tipo checkbox para o toggle
     const toggleInput = document.createElement('input');
     toggleInput.type = 'checkbox';
     toggleInput.id = `${extension.name.toLowerCase().replace(/\s/g, '-')}-toggle`; // Criar um ID unico
@@ -84,20 +83,18 @@ function renderExtensions(extensions) {
     toggleInput.checked = extension.isActive;
 
     // Adicionando o event listener para o evento 'change'
-    toggleInput.addEventListener('change', function() {
-        const extensionName = extension.name;
-        const isChecked = this.checked; // 'this se refere ao checkbox que foi alterado
+    toggleInput.addEventListener('change', function () {
+      const extensionName = extension.name;
+      const isChecked = this.checked; // 'this se refere ao checkbox que foi alterado
 
-        console.log(`Estado de "${extensionName}" mudou para: ${isChecked}`);
-
-        // O objetivo aqui é simular um senário real de atualização dos dados.
-        const extensionIndex = extensions.findIndex(ext => ext.name === extensionName);
-        if (extensionIndex !== -1) {
-            extensions[extensionIndex].isActive = isChecked;
-            console.log('Dados da extensão atualizados:', extensions[extensionIndex]);
-        }
+      // O objetivo aqui é simular um senário real de atualização dos dados.
+      const extensionIndex = extensions.findIndex(ext => ext.name === extensionName);
+      if (extensionIndex !== -1) {
+        extensions[extensionIndex].isActive = isChecked;
+      }
     })
 
+    // Criando o label para o toggle
     const toggleLabel = document.createElement('label');
     toggleLabel.classList.add('toggle-label');
     toggleLabel.setAttribute('for', toggleInput.id);
@@ -115,6 +112,7 @@ function renderExtensions(extensions) {
   });
 }
 
+// Adicionando funcionalidade de filtro
 const filterButtons = document.querySelectorAll('.filter-button');
 let currentFilter = 'All';
 
@@ -124,8 +122,8 @@ filterButtons.forEach(button => {
 
 function handleFilterClick(event) {
   const clickedFilter = event.target.textContent;
-  console.log('Botão de filtro clicado:', clickedFilter);
 
+  // Verificar se o filtro clicado é o mesmo que o atual
   let filteredExtensions = [];
 
   if (clickedFilter === 'All') {
@@ -147,6 +145,7 @@ function handleFilterClick(event) {
   updateFilterButtonStyles(clickedFilter);
 }
 
+//  Atualizar os estilos dos botões de filtro
 function updateFilterButtonStyles(activeFilter) {
   filterButtons.forEach(button => {
     if (button.textContent === activeFilter) {
@@ -159,28 +158,28 @@ function updateFilterButtonStyles(activeFilter) {
 }
 
 //selecao de tema de cores
-
 const lightThemeButton = document.querySelector('.light-theme');
 const darkThemeButton = document.querySelector('.dark-theme');
-const body = document.body; // Ou outro elemento principal que você queira mudar o tema
+const body = document.body;
 
 lightThemeButton.addEventListener('click', switchToLightTheme);
 darkThemeButton.addEventListener('click', switchToDarkTheme);
 
+// Funções para alternar entre os temas
 function switchToLightTheme() {
   body.classList.remove('dark');
   body.classList.add('light');
-  darkThemeButton.style.display = 'block'; // Mostra o botão da lua
-  lightThemeButton.style.display = 'none'; // Esconde o botão do sol
+  darkThemeButton.style.display = 'block'; 
+  lightThemeButton.style.display = 'none'; 
   localStorage.setItem('theme', 'light'); // Salva a preferência no localStorage
 }
 
 function switchToDarkTheme() {
   body.classList.remove('light');
   body.classList.add('dark');
-  lightThemeButton.style.display = 'block'; // Mostra o botão do sol
-  darkThemeButton.style.display = 'none'; // Esconde o botão da lua
-  localStorage.setItem('theme', 'dark'); // Salva a preferência no localStorage
+  lightThemeButton.style.display = 'block'; 
+  darkThemeButton.style.display = 'none'; 
+  localStorage.setItem('theme', 'dark');
 }
 
 // Verificar a preferência de tema ao carregar a página
@@ -190,6 +189,5 @@ if (savedTheme === 'dark') {
 } else if (savedTheme === 'light') {
   switchToLightTheme();
 } else {
-  // Se não houver preferência salva, definir o tema claro como padrão
   switchToLightTheme();
 }
