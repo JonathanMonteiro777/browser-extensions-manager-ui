@@ -30,13 +30,19 @@ Os usuários devem ser capazes de:
 - [x] Ver a layout ideal para a interface dependendo do taanho da tela do dispositivo
 - [x] Ver os estados de passar o mouse (hover) e foco para todos os elementos interativos da página
 
-### Meu Processo
-
-Vou colocar a imagem do meu projeto quando o desafio estiver completo.
-
-### Links
-
 ## Meu processo
+
+**Mobile dark-theme**
+![Preview Mobile](assets/screenshots/mobile-dark-theme.png)
+
+**Mobile light-theme**
+![Preview Mobile](asstes/screenshots/mobile-light-theme.png)
+
+**Desktop dark-theme**
+![Preview Desktop](assets/screenshots/dark-theme.png)
+
+**Desktop light-theme**
+![Preview Desktop](assets/screenshots/light-theme.png)
 
 ### Construido com
 
