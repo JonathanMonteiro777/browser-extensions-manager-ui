@@ -33,16 +33,16 @@ Os usuários devem ser capazes de:
 ## Meu processo
 
 **Mobile dark-theme**
-![Preview Mobile](assets/screenshots/mobile-dark.png)
+![Preview Mobile](.assets/screenshots/mobile-dark.png)
 
 **Mobile light-theme**
-![Preview Mobile](assets/screenshots/mobile-light.png)
+![Preview Mobile](.assets/screenshots/mobile-light.png)
 
 **Desktop dark-theme**
-![Preview Desktop](assets/screenshots/dark-theme.png)
+![Preview Desktop](.assets/screenshots/dark-theme.png)
 
 **Desktop light-theme**
-![Preview Desktop](assets/screenshots/light-theme.png)
+![Preview Desktop](.assets/screenshots/light-theme.png)
 
 ### Construido com
 
