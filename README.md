@@ -46,7 +46,6 @@ Os usuários devem ser capazes de:
 
 ### Links
 
-- **URL da Solução (Repositório):** [Acesse o Código no GitHub](https://github.com/jonathanmonteiro777/browser-extensions-manager-ui)
 - **URL do Site Ativo:** [Veja o Projeto Online](https://jonathanmonteiro777.github.io/browser-extensions-manager-ui/)
 
 ## Meu processo
