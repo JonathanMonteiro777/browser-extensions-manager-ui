@@ -30,19 +30,26 @@ Os usuários devem ser capazes de:
 - [x] Ver a layout ideal para a interface dependendo do taanho da tela do dispositivo
 - [x] Ver os estados de passar o mouse (hover) e foco para todos os elementos interativos da página
 
-## Meu processo
+### Como ficou
 
 **Mobile dark-theme**
-![Preview Mobile](/browser-extensions-manager-ui-main/browser-extensions-manager-ui-main/assets/screenshots/mobile-dark.png)
+![Preview Mobile](assets/screenshots/mobile-dark.png)
 
 **Mobile light-theme**
-![Preview Mobile](/browser-extensions-manager-ui-main/browser-extensions-manager-ui-main/assets/screenshots/mobile-light.png)
+![Preview Mobile](assets/screenshots/mobile-light.png)
 
 **Desktop dark-theme**
-![Preview Desktop](/browser-extensions-manager-ui-main/browser-extensions-manager-ui-main/assets/screenshots/dark-theme.png)
+![Preview Desktop](assets/screenshots/dark-theme.png)
 
 **Desktop light-theme**
-![Preview Desktop](/browser-extensions-manager-ui-main/browser-extensions-manager-ui-main/assets/screenshots/light-theme.png)
+![Preview Desktop](assets/screenshots/light-theme.png)
+
+### Links
+
+- **URL da Solução (Repositório):** [Acesse o Código no GitHub](https://github.com/jonathanmonteiro777/browser-extensions-manager-ui)
+- **URL do Site Ativo:** [Veja o Projeto Online](https://jonathanmonteiro777.github.io/browser-extensions-manager-ui/)
+
+## Meu processo
 
 ### Construido com
 
